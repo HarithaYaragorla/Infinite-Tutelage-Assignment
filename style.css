@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #9370DB;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar .logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.sidebar .menu ul {
+    list-style-type: none;
+}
+
+.sidebar .menu ul li {
+    padding: 12px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.sidebar .menu ul li i {
+    margin-right: 10px;
+}
+
+.sidebar .menu ul li.active,
+.sidebar .menu ul li:hover {
+    background-color: #895cf2;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.sidebar .bottom-section ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.sidebar .bottom-section ul li {
+    padding: 12px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.sidebar .bottom-section ul li i {
+    margin-right: 10px;
+}
+
+.sidebar .bottom-section ul li:hover {
+    background-color: #895cf2;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.sidebar .user {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    background-color: #ffffff;
+    gap: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.top-section {
+    flex: 2;
+}
+
+.side-section {
+    flex: 1;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    position: relative;
+    margin-right: 20px;
+    width: 250px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7640F4;
+}
+
+.notification-icon {
+    font-size: 15px;
+    color: #7640F4;
+    cursor: pointer;
+}
+
+.quick-links {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.quick-links .links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.quick-links .link {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #9370DB;
+}
+
+.quick-links .link i {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.quick-links .link:hover {
+    background-color: #ddd;
+}
+
+.overview {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chart-actions p {
+    color: #9370DB;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chart-actions button:hover {
+    background-color: #5b30c8;
+}
+
+.chart-container {
+    width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-button {
+    background-color: #f3f4f6;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.chart-button.active {
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+.chart {
+    display: flex;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    height: 250px;
+}
+
+.y-label {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: right;
+}
+
+.bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 250px;
+    width: 100%;
+}
+
+.bar {
+    background-color: #9370DB;
+    opacity: 0.8;
+    width: 20px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+
+.accounts {
+    margin-top: 20px;
+}
+
+.trading-accounts,
+.open-trades {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #333333;
+}
+
+.account-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: flex-start;
+}
+
+.account-details {
+    flex: 1;
+}
+
+.account-type {
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.platform {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.platform span {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.account-balance {
+    font-size: 24px;
+    color: #1f2937;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.account-balance i {
+    color: #6b7280;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.account-balance i:hover {
+    color: #374151;
+}
+
+.open-trades .trade-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.trade-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.trade-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.trade-pair {
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.trade-status {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.trade-status.long {
+    background-color: #d1fae5;
+    color: #047857;
+}
+
+.trade-status.short {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.trade-size {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.trade-profit {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.trade-profit.positive {
+    color: #10b981;
+}
+
+.trade-profit.negative {
+    color: #ef4444;
+}
